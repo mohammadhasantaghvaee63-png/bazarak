@@ -1,0 +1,620 @@
+
+> bazarak-admin@0.1.0 dev
+> next dev --webpack
+
+▲ Next.js 16.3.5 (webpack)
+- Local:         http://localhost:3000
+- Network:       http://26.26.26.2:3000
+✓ Ready in 2.9s
+⚠ Attempted to load /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/next-swc-fallback/@next/swc-android-arm-eabi/next-swc.android-arm-eabi.node, but it was not installed
+⚠ Attempted to load @next/swc-android-arm-eabi, but it was not installed
+⚠ Warning: Next.js ignored package-lock.json in /data/data/com.termux/files/home because it is outside the current Git repository (/data/data/com.termux/files/home/bazarak).
+ To use this directory, set `outputFileTracingRoot` in your Next.js config.
+
+✓ Running next.config.ts took 1074ms
+  Skipping creating a lockfile at /data/data/com.termux/files/home/bazarak/bazarak-admin/.next/dev/lock because we're using WASM bindings
+
+○ Compiling / ...
+⨯ app/layout.tsx
+An error occurred in `next/font`.
+
+Error: Cannot find module '../lightningcss.android-arm.node'
+Require stack:
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/@tailwindcss/node/node_modules/lightningcss/node/index.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/@tailwindcss/node/dist/index.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/@tailwindcss/postcss/dist/index.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/build/webpack/config/blocks/css/plugins.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/build/webpack/config/blocks/css/index.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/build/webpack/config/index.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/build/webpack-config.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/dev/hot-reloader-webpack.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/lib/router-server.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/lib/start-server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1500:15)
+    at /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/require-hook.js:68:36
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1116:12)
+    at Module._load (node:internal/modules/cjs/loader:1285:25)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1600:12)
+    at mod.require (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/require-hook.js:79:28)
+    at require (node:internal/modules/helpers:153:16)
+    at Object.<anonymous> (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/@tailwindcss/node/node_modules/lightningcss/node/index.js:20:12)
+    at Module._compile (node:internal/modules/cjs/loader:1854:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1985:10)
+    at Module.load (node:internal/modules/cjs/loader:1577:32)
+    at Module._load (node:internal/modules/cjs/loader:1379:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1600:12)
+    at mod.require (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/require-hook.js:79:28)
+    at require (node:internal/modules/helpers:153:16)
+    at Object.<anonymous> (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/@tailwindcss/node/dist/index.js:15:203)
+    at Module._compile (node:internal/modules/cjs/loader:1854:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1985:10)
+    at Module.load (node:internal/modules/cjs/loader:1577:32)
+    at Module._load (node:internal/modules/cjs/loader:1379:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1600:12)
+    at mod.require (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/require-hook.js:79:28)
+    at require (node:internal/modules/helpers:153:16)
+    at Object.<anonymous> (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/@tailwindcss/postcss/dist/index.js:1:1328)
+    at Module._compile (node:internal/modules/cjs/loader:1854:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1985:10)
+    at Module.load (node:internal/modules/cjs/loader:1577:32)
+    at Module._load (node:internal/modules/cjs/loader:1379:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1600:12)
+    at mod.require (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/require-hook.js:79:28)
+    at require (node:internal/modules/helpers:153:16)
+    at /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/build/webpack/config/blocks/css/plugins.js:66:44
+    at plugin (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/build/webpack/config/blocks/css/plugins.js:30:44)
+    at Processor.normalize (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/node_modules/postcss/lib/processor.js:18:13)
+    at new Processor (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/node_modules/postcss/lib/processor.js:11:25)
+    at postcss (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/node_modules/postcss/lib/postcss.js:26:10)
+    at /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/build/webpack/config/blocks/css/index.js:128:37
+    at async /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/build/webpack/loaders/next-font-loader/index.js:100:33
+    at async Span.traceAsyncFn (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/trace/trace.js:164:20)
+⨯ app/layout.tsx
+An error occurred in `next/font`.
+
+Error: Cannot find module '../lightningcss.android-arm.node'
+Require stack:
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/@tailwindcss/node/node_modules/lightningcss/node/index.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/@tailwindcss/node/dist/index.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/@tailwindcss/postcss/dist/index.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/build/webpack/config/blocks/css/plugins.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/build/webpack/config/blocks/css/index.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/build/webpack/config/index.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/build/webpack-config.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/dev/hot-reloader-webpack.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/lib/router-server.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/lib/start-server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1500:15)
+    at /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/require-hook.js:68:36
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1116:12)
+    at Module._load (node:internal/modules/cjs/loader:1285:25)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1600:12)
+    at mod.require (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/require-hook.js:79:28)
+    at require (node:internal/modules/helpers:153:16)
+    at Object.<anonymous> (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/@tailwindcss/node/node_modules/lightningcss/node/index.js:20:12)
+    at Module._compile (node:internal/modules/cjs/loader:1854:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1985:10)
+    at Module.load (node:internal/modules/cjs/loader:1577:32)
+    at Module._load (node:internal/modules/cjs/loader:1379:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1600:12)
+    at mod.require (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/require-hook.js:79:28)
+    at require (node:internal/modules/helpers:153:16)
+    at Object.<anonymous> (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/@tailwindcss/node/dist/index.js:15:203)
+    at Module._compile (node:internal/modules/cjs/loader:1854:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1985:10)
+    at Module.load (node:internal/modules/cjs/loader:1577:32)
+    at Module._load (node:internal/modules/cjs/loader:1379:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1600:12)
+    at mod.require (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/require-hook.js:79:28)
+    at require (node:internal/modules/helpers:153:16)
+    at Object.<anonymous> (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/@tailwindcss/postcss/dist/index.js:1:1328)
+    at Module._compile (node:internal/modules/cjs/loader:1854:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1985:10)
+    at Module.load (node:internal/modules/cjs/loader:1577:32)
+    at Module._load (node:internal/modules/cjs/loader:1379:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1600:12)
+    at mod.require (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/require-hook.js:79:28)
+    at require (node:internal/modules/helpers:153:16)
+    at /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/build/webpack/config/blocks/css/plugins.js:66:44
+    at plugin (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/build/webpack/config/blocks/css/plugins.js:30:44)
+    at Processor.normalize (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/node_modules/postcss/lib/processor.js:18:13)
+    at new Processor (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/node_modules/postcss/lib/processor.js:11:25)
+    at postcss (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/node_modules/postcss/lib/postcss.js:26:10)
+    at /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/build/webpack/config/blocks/css/index.js:128:37
+    at async /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/build/webpack/loaders/next-font-loader/index.js:100:33
+    at async Span.traceAsyncFn (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/trace/trace.js:164:20)
+Watchpack Error (watcher): Error: EACCES: permission denied, watch '/data/data'
+Watchpack Error (watcher): Error: EACCES: permission denied, watch '/data'
+Watchpack Error (watcher): Error: EACCES: permission denied, watch '/'
+Watchpack Error (initial scan): Error: EACCES: permission denied, scandir '/data/data'
+Watchpack Error (initial scan): Error: EACCES: permission denied, scandir '/data'
+Watchpack Error (initial scan): Error: EACCES: permission denied, scandir '/'
+Watchpack Error (watcher): Error: EACCES: permission denied, watch '/data/data'
+Watchpack Error (watcher): Error: EACCES: permission denied, watch '/data'
+Watchpack Error (watcher): Error: EACCES: permission denied, watch '/'
+Watchpack Error (initial scan): Error: EACCES: permission denied, scandir '/data/data'
+Watchpack Error (initial scan): Error: EACCES: permission denied, scandir '/data'
+Watchpack Error (initial scan): Error: EACCES: permission denied, scandir '/'
+Watchpack Error (watcher): Error: EACCES: permission denied, watch '/data/data'
+Watchpack Error (watcher): Error: EACCES: permission denied, watch '/data'
+Watchpack Error (watcher): Error: EACCES: permission denied, watch '/'
+Watchpack Error (initial scan): Error: EACCES: permission denied, scandir '/data/data'
+Watchpack Error (initial scan): Error: EACCES: permission denied, scandir '/data'
+Watchpack Error (initial scan): Error: EACCES: permission denied, scandir '/'
+⨯ app/layout.tsx
+An error occurred in `next/font`.
+
+Error: Cannot find module '../lightningcss.android-arm.node'
+Require stack:
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/@tailwindcss/node/node_modules/lightningcss/node/index.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/@tailwindcss/node/dist/index.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/@tailwindcss/postcss/dist/index.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/build/webpack/config/blocks/css/plugins.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/build/webpack/config/blocks/css/index.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/build/webpack/config/index.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/build/webpack-config.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/dev/hot-reloader-webpack.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/lib/router-server.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/lib/start-server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1500:15)
+    at /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/require-hook.js:68:36
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1116:12)
+    at Module._load (node:internal/modules/cjs/loader:1285:25)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1600:12)
+    at mod.require (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/require-hook.js:79:28)
+    at require (node:internal/modules/helpers:153:16)
+    at Object.<anonymous> (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/@tailwindcss/node/node_modules/lightningcss/node/index.js:20:12)
+    at Module._compile (node:internal/modules/cjs/loader:1854:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1985:10)
+    at Module.load (node:internal/modules/cjs/loader:1577:32)
+    at Module._load (node:internal/modules/cjs/loader:1379:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1600:12)
+    at mod.require (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/require-hook.js:79:28)
+    at require (node:internal/modules/helpers:153:16)
+    at Object.<anonymous> (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/@tailwindcss/node/dist/index.js:15:203)
+    at Module._compile (node:internal/modules/cjs/loader:1854:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1985:10)
+    at Module.load (node:internal/modules/cjs/loader:1577:32)
+    at Module._load (node:internal/modules/cjs/loader:1379:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1600:12)
+    at mod.require (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/require-hook.js:79:28)
+    at require (node:internal/modules/helpers:153:16)
+    at Object.<anonymous> (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/@tailwindcss/postcss/dist/index.js:1:1328)
+    at Module._compile (node:internal/modules/cjs/loader:1854:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1985:10)
+    at Module.load (node:internal/modules/cjs/loader:1577:32)
+    at Module._load (node:internal/modules/cjs/loader:1379:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1600:12)
+    at mod.require (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/require-hook.js:79:28)
+    at require (node:internal/modules/helpers:153:16)
+    at /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/build/webpack/config/blocks/css/plugins.js:66:44
+    at plugin (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/build/webpack/config/blocks/css/plugins.js:30:44)
+    at Processor.normalize (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/node_modules/postcss/lib/processor.js:18:13)
+    at new Processor (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/node_modules/postcss/lib/processor.js:11:25)
+    at postcss (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/node_modules/postcss/lib/postcss.js:26:10)
+    at /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/build/webpack/config/blocks/css/index.js:128:37
+    at async /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/build/webpack/loaders/next-font-loader/index.js:100:33
+    at async Span.traceAsyncFn (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/trace/trace.js:164:20)
+ GET / 500 in 23.0s (next.js: 22.2s, application-code: 739ms)
+⨯ app/layout.tsx
+An error occurred in `next/font`.
+
+Error: Cannot find module '../lightningcss.android-arm.node'
+Require stack:
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/@tailwindcss/node/node_modules/lightningcss/node/index.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/@tailwindcss/node/dist/index.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/@tailwindcss/postcss/dist/index.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/build/webpack/config/blocks/css/plugins.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/build/webpack/config/blocks/css/index.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/build/webpack/config/index.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/build/webpack-config.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/dev/hot-reloader-webpack.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/lib/router-server.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/lib/start-server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1500:15)
+    at /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/require-hook.js:68:36
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1116:12)
+    at Module._load (node:internal/modules/cjs/loader:1285:25)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1600:12)
+    at mod.require (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/require-hook.js:79:28)
+    at require (node:internal/modules/helpers:153:16)
+    at Object.<anonymous> (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/@tailwindcss/node/node_modules/lightningcss/node/index.js:20:12)
+    at Module._compile (node:internal/modules/cjs/loader:1854:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1985:10)
+    at Module.load (node:internal/modules/cjs/loader:1577:32)
+    at Module._load (node:internal/modules/cjs/loader:1379:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1600:12)
+    at mod.require (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/require-hook.js:79:28)
+    at require (node:internal/modules/helpers:153:16)
+    at Object.<anonymous> (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/@tailwindcss/node/dist/index.js:15:203)
+    at Module._compile (node:internal/modules/cjs/loader:1854:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1985:10)
+    at Module.load (node:internal/modules/cjs/loader:1577:32)
+    at Module._load (node:internal/modules/cjs/loader:1379:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1600:12)
+    at mod.require (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/require-hook.js:79:28)
+    at require (node:internal/modules/helpers:153:16)
+    at Object.<anonymous> (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/@tailwindcss/postcss/dist/index.js:1:1328)
+    at Module._compile (node:internal/modules/cjs/loader:1854:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1985:10)
+    at Module.load (node:internal/modules/cjs/loader:1577:32)
+    at Module._load (node:internal/modules/cjs/loader:1379:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1600:12)
+    at mod.require (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/require-hook.js:79:28)
+    at require (node:internal/modules/helpers:153:16)
+    at /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/build/webpack/config/blocks/css/plugins.js:66:44
+    at plugin (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/build/webpack/config/blocks/css/plugins.js:30:44)
+    at Processor.normalize (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/node_modules/postcss/lib/processor.js:18:13)
+    at new Processor (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/node_modules/postcss/lib/processor.js:11:25)
+    at postcss (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/node_modules/postcss/lib/postcss.js:26:10)
+    at /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/build/webpack/config/blocks/css/index.js:128:37
+    at async /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/build/webpack/loaders/next-font-loader/index.js:100:33
+    at async Span.traceAsyncFn (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/trace/trace.js:164:20)
+⨯ app/layout.tsx
+An error occurred in `next/font`.
+
+Error: Cannot find module '../lightningcss.android-arm.node'
+Require stack:
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/@tailwindcss/node/node_modules/lightningcss/node/index.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/@tailwindcss/node/dist/index.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/@tailwindcss/postcss/dist/index.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/build/webpack/config/blocks/css/plugins.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/build/webpack/config/blocks/css/index.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/build/webpack/config/index.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/build/webpack-config.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/dev/hot-reloader-webpack.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/lib/router-server.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/lib/start-server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1500:15)
+    at /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/require-hook.js:68:36
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1116:12)
+    at Module._load (node:internal/modules/cjs/loader:1285:25)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1600:12)
+    at mod.require (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/require-hook.js:79:28)
+    at require (node:internal/modules/helpers:153:16)
+    at Object.<anonymous> (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/@tailwindcss/node/node_modules/lightningcss/node/index.js:20:12)
+    at Module._compile (node:internal/modules/cjs/loader:1854:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1985:10)
+    at Module.load (node:internal/modules/cjs/loader:1577:32)
+    at Module._load (node:internal/modules/cjs/loader:1379:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1600:12)
+    at mod.require (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/require-hook.js:79:28)
+    at require (node:internal/modules/helpers:153:16)
+    at Object.<anonymous> (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/@tailwindcss/node/dist/index.js:15:203)
+    at Module._compile (node:internal/modules/cjs/loader:1854:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1985:10)
+    at Module.load (node:internal/modules/cjs/loader:1577:32)
+    at Module._load (node:internal/modules/cjs/loader:1379:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1600:12)
+    at mod.require (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/require-hook.js:79:28)
+    at require (node:internal/modules/helpers:153:16)
+    at Object.<anonymous> (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/@tailwindcss/postcss/dist/index.js:1:1328)
+    at Module._compile (node:internal/modules/cjs/loader:1854:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1985:10)
+    at Module.load (node:internal/modules/cjs/loader:1577:32)
+    at Module._load (node:internal/modules/cjs/loader:1379:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1600:12)
+    at mod.require (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/require-hook.js:79:28)
+    at require (node:internal/modules/helpers:153:16)
+    at /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/build/webpack/config/blocks/css/plugins.js:66:44
+    at plugin (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/build/webpack/config/blocks/css/plugins.js:30:44)
+    at Processor.normalize (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/node_modules/postcss/lib/processor.js:18:13)
+    at new Processor (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/node_modules/postcss/lib/processor.js:11:25)
+    at postcss (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/node_modules/postcss/lib/postcss.js:26:10)
+    at /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/build/webpack/config/blocks/css/index.js:128:37
+    at async /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/build/webpack/loaders/next-font-loader/index.js:100:33
+    at async Span.traceAsyncFn (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/trace/trace.js:164:20)
+⨯ app/layout.tsx
+An error occurred in `next/font`.
+
+Error: Cannot find module '../lightningcss.android-arm.node'
+Require stack:
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/@tailwindcss/node/node_modules/lightningcss/node/index.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/@tailwindcss/node/dist/index.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/@tailwindcss/postcss/dist/index.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/build/webpack/config/blocks/css/plugins.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/build/webpack/config/blocks/css/index.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/build/webpack/config/index.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/build/webpack-config.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/dev/hot-reloader-webpack.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/lib/router-server.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/lib/start-server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1500:15)
+    at /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/require-hook.js:68:36
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1116:12)
+    at Module._load (node:internal/modules/cjs/loader:1285:25)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1600:12)
+    at mod.require (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/require-hook.js:79:28)
+    at require (node:internal/modules/helpers:153:16)
+    at Object.<anonymous> (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/@tailwindcss/node/node_modules/lightningcss/node/index.js:20:12)
+    at Module._compile (node:internal/modules/cjs/loader:1854:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1985:10)
+    at Module.load (node:internal/modules/cjs/loader:1577:32)
+    at Module._load (node:internal/modules/cjs/loader:1379:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1600:12)
+    at mod.require (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/require-hook.js:79:28)
+    at require (node:internal/modules/helpers:153:16)
+    at Object.<anonymous> (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/@tailwindcss/node/dist/index.js:15:203)
+    at Module._compile (node:internal/modules/cjs/loader:1854:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1985:10)
+    at Module.load (node:internal/modules/cjs/loader:1577:32)
+    at Module._load (node:internal/modules/cjs/loader:1379:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1600:12)
+    at mod.require (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/require-hook.js:79:28)
+    at require (node:internal/modules/helpers:153:16)
+    at Object.<anonymous> (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/@tailwindcss/postcss/dist/index.js:1:1328)
+    at Module._compile (node:internal/modules/cjs/loader:1854:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1985:10)
+    at Module.load (node:internal/modules/cjs/loader:1577:32)
+    at Module._load (node:internal/modules/cjs/loader:1379:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1600:12)
+    at mod.require (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/require-hook.js:79:28)
+    at require (node:internal/modules/helpers:153:16)
+    at /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/build/webpack/config/blocks/css/plugins.js:66:44
+    at plugin (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/build/webpack/config/blocks/css/plugins.js:30:44)
+    at Processor.normalize (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/node_modules/postcss/lib/processor.js:18:13)
+    at new Processor (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/node_modules/postcss/lib/processor.js:11:25)
+    at postcss (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/node_modules/postcss/lib/postcss.js:26:10)
+    at /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/build/webpack/config/blocks/css/index.js:128:37
+    at async /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/build/webpack/loaders/next-font-loader/index.js:100:33
+    at async Span.traceAsyncFn (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/trace/trace.js:164:20)
+⨯ app/layout.tsx
+An error occurred in `next/font`.
+
+Error: Cannot find module '../lightningcss.android-arm.node'
+Require stack:
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/@tailwindcss/node/node_modules/lightningcss/node/index.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/@tailwindcss/node/dist/index.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/@tailwindcss/postcss/dist/index.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/build/webpack/config/blocks/css/plugins.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/build/webpack/config/blocks/css/index.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/build/webpack/config/index.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/build/webpack-config.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/dev/hot-reloader-webpack.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/lib/router-server.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/lib/start-server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1500:15)
+    at /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/require-hook.js:68:36
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1116:12)
+    at Module._load (node:internal/modules/cjs/loader:1285:25)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1600:12)
+    at mod.require (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/require-hook.js:79:28)
+    at require (node:internal/modules/helpers:153:16)
+    at Object.<anonymous> (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/@tailwindcss/node/node_modules/lightningcss/node/index.js:20:12)
+    at Module._compile (node:internal/modules/cjs/loader:1854:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1985:10)
+    at Module.load (node:internal/modules/cjs/loader:1577:32)
+    at Module._load (node:internal/modules/cjs/loader:1379:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1600:12)
+    at mod.require (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/require-hook.js:79:28)
+    at require (node:internal/modules/helpers:153:16)
+    at Object.<anonymous> (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/@tailwindcss/node/dist/index.js:15:203)
+    at Module._compile (node:internal/modules/cjs/loader:1854:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1985:10)
+    at Module.load (node:internal/modules/cjs/loader:1577:32)
+    at Module._load (node:internal/modules/cjs/loader:1379:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1600:12)
+    at mod.require (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/require-hook.js:79:28)
+    at require (node:internal/modules/helpers:153:16)
+    at Object.<anonymous> (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/@tailwindcss/postcss/dist/index.js:1:1328)
+    at Module._compile (node:internal/modules/cjs/loader:1854:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1985:10)
+    at Module.load (node:internal/modules/cjs/loader:1577:32)
+    at Module._load (node:internal/modules/cjs/loader:1379:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1600:12)
+    at mod.require (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/require-hook.js:79:28)
+    at require (node:internal/modules/helpers:153:16)
+    at /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/build/webpack/config/blocks/css/plugins.js:66:44
+    at plugin (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/build/webpack/config/blocks/css/plugins.js:30:44)
+    at Processor.normalize (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/node_modules/postcss/lib/processor.js:18:13)
+    at new Processor (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/node_modules/postcss/lib/processor.js:11:25)
+    at postcss (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/node_modules/postcss/lib/postcss.js:26:10)
+    at /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/build/webpack/config/blocks/css/index.js:128:37
+    at async /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/build/webpack/loaders/next-font-loader/index.js:100:33
+    at async Span.traceAsyncFn (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/trace/trace.js:164:20)
+⨯ app/layout.tsx
+An error occurred in `next/font`.
+
+Error: Cannot find module '../lightningcss.android-arm.node'
+Require stack:
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/@tailwindcss/node/node_modules/lightningcss/node/index.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/@tailwindcss/node/dist/index.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/@tailwindcss/postcss/dist/index.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/build/webpack/config/blocks/css/plugins.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/build/webpack/config/blocks/css/index.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/build/webpack/config/index.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/build/webpack-config.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/dev/hot-reloader-webpack.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/lib/router-server.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/lib/start-server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1500:15)
+    at /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/require-hook.js:68:36
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1116:12)
+    at Module._load (node:internal/modules/cjs/loader:1285:25)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1600:12)
+    at mod.require (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/require-hook.js:79:28)
+    at require (node:internal/modules/helpers:153:16)
+    at Object.<anonymous> (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/@tailwindcss/node/node_modules/lightningcss/node/index.js:20:12)
+    at Module._compile (node:internal/modules/cjs/loader:1854:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1985:10)
+    at Module.load (node:internal/modules/cjs/loader:1577:32)
+    at Module._load (node:internal/modules/cjs/loader:1379:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1600:12)
+    at mod.require (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/require-hook.js:79:28)
+    at require (node:internal/modules/helpers:153:16)
+    at Object.<anonymous> (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/@tailwindcss/node/dist/index.js:15:203)
+    at Module._compile (node:internal/modules/cjs/loader:1854:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1985:10)
+    at Module.load (node:internal/modules/cjs/loader:1577:32)
+    at Module._load (node:internal/modules/cjs/loader:1379:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1600:12)
+    at mod.require (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/require-hook.js:79:28)
+    at require (node:internal/modules/helpers:153:16)
+    at Object.<anonymous> (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/@tailwindcss/postcss/dist/index.js:1:1328)
+    at Module._compile (node:internal/modules/cjs/loader:1854:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1985:10)
+    at Module.load (node:internal/modules/cjs/loader:1577:32)
+    at Module._load (node:internal/modules/cjs/loader:1379:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1600:12)
+    at mod.require (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/require-hook.js:79:28)
+    at require (node:internal/modules/helpers:153:16)
+    at /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/build/webpack/config/blocks/css/plugins.js:66:44
+    at plugin (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/build/webpack/config/blocks/css/plugins.js:30:44)
+    at Processor.normalize (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/node_modules/postcss/lib/processor.js:18:13)
+    at new Processor (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/node_modules/postcss/lib/processor.js:11:25)
+    at postcss (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/node_modules/postcss/lib/postcss.js:26:10)
+    at /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/build/webpack/config/blocks/css/index.js:128:37
+    at async /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/build/webpack/loaders/next-font-loader/index.js:100:33
+    at async Span.traceAsyncFn (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/trace/trace.js:164:20)
+⨯ app/layout.tsx
+An error occurred in `next/font`.
+
+Error: Cannot find module '../lightningcss.android-arm.node'
+Require stack:
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/@tailwindcss/node/node_modules/lightningcss/node/index.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/@tailwindcss/node/dist/index.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/@tailwindcss/postcss/dist/index.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/build/webpack/config/blocks/css/plugins.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/build/webpack/config/blocks/css/index.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/build/webpack/config/index.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/build/webpack-config.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/dev/hot-reloader-webpack.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/lib/router-server.js
+- /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/lib/start-server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1500:15)
+    at /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/require-hook.js:68:36
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1116:12)
+    at Module._load (node:internal/modules/cjs/loader:1285:25)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1600:12)
+    at mod.require (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/require-hook.js:79:28)
+    at require (node:internal/modules/helpers:153:16)
+    at Object.<anonymous> (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/@tailwindcss/node/node_modules/lightningcss/node/index.js:20:12)
+    at Module._compile (node:internal/modules/cjs/loader:1854:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1985:10)
+    at Module.load (node:internal/modules/cjs/loader:1577:32)
+    at Module._load (node:internal/modules/cjs/loader:1379:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1600:12)
+    at mod.require (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/require-hook.js:79:28)
+    at require (node:internal/modules/helpers:153:16)
+    at Object.<anonymous> (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/@tailwindcss/node/dist/index.js:15:203)
+    at Module._compile (node:internal/modules/cjs/loader:1854:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1985:10)
+    at Module.load (node:internal/modules/cjs/loader:1577:32)
+    at Module._load (node:internal/modules/cjs/loader:1379:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1600:12)
+    at mod.require (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/require-hook.js:79:28)
+    at require (node:internal/modules/helpers:153:16)
+    at Object.<anonymous> (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/@tailwindcss/postcss/dist/index.js:1:1328)
+    at Module._compile (node:internal/modules/cjs/loader:1854:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1985:10)
+    at Module.load (node:internal/modules/cjs/loader:1577:32)
+    at Module._load (node:internal/modules/cjs/loader:1379:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1600:12)
+    at mod.require (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/server/require-hook.js:79:28)
+    at require (node:internal/modules/helpers:153:16)
+    at /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/build/webpack/config/blocks/css/plugins.js:66:44
+    at plugin (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/build/webpack/config/blocks/css/plugins.js:30:44)
+    at Processor.normalize (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/node_modules/postcss/lib/processor.js:18:13)
+    at new Processor (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/node_modules/postcss/lib/processor.js:11:25)
+    at postcss (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/node_modules/postcss/lib/postcss.js:26:10)
+    at /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/build/webpack/config/blocks/css/index.js:128:37
+    at async /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/build/webpack/loaders/next-font-loader/index.js:100:33
+    at async Span.traceAsyncFn (/data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/dist/trace/trace.js:164:20)
+⨯ The directory at "/data/data/com.termux/files/home/bazarak/bazarak-admin/.next/dev" was deleted.
+
+Deleting this directory while Next.js is running can lead to undefined behavior. Restarting the server to recover...
+▲ Next.js 16.3.5 (webpack)
+- Local:         http://localhost:3000
+- Network:       http://107.224.78.235:3000
+✓ Ready in 2.4s
+⚠ Attempted to load /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/next-swc-fallback/@next/swc-android-arm-eabi/next-swc.android-arm-eabi.node, but it was not installed
+⚠ Attempted to load @next/swc-android-arm-eabi, but it was not installed
+⚠ Warning: Next.js ignored package-lock.json in /data/data/com.termux/files/home because it is outside the current Git repository (/data/data/com.termux/files/home/bazarak).
+ To use this directory, set `outputFileTracingRoot` in your Next.js config.
+
+✓ Running next.config.ts took 1064ms
+  Skipping creating a lockfile at /data/data/com.termux/files/home/bazarak/bazarak-admin/.next/dev/lock because we're using WASM bindings
+
+⨯ The directory at "/data/data/com.termux/files/home/bazarak/bazarak-admin/.next/dev" was deleted.
+
+Deleting this directory while Next.js is running can lead to undefined behavior. Restarting the server to recover...
+▲ Next.js 16.3.5 (webpack)
+- Local:         http://localhost:3000
+- Network:       http://107.224.78.235:3000
+✓ Ready in 2.3s
+⚠ Attempted to load /data/data/com.termux/files/home/bazarak/bazarak-admin/node_modules/next/next-swc-fallback/@next/swc-android-arm-eabi/next-swc.android-arm-eabi.node, but it was not installed
+⚠ Attempted to load @next/swc-android-arm-eabi, but it was not installed
+⚠ Warning: Next.js ignored package-lock.json in /data/data/com.termux/files/home because it is outside the current Git repository (/data/data/com.termux/files/home/bazarak).
+ To use this directory, set `outputFileTracingRoot` in your Next.js config.
+
+✓ Running next.config.ts took 1025ms
+  Skipping creating a lockfile at /data/data/com.termux/files/home/bazarak/bazarak-admin/.next/dev/lock because we're using WASM bindings
+
+○ Compiling / ...
+ GET / 200 in 19.7s (next.js: 18.4s, application-code: 1333ms)
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename '/data/data/com.termux/files/home/bazarak/bazarak-admin/.next/dev/cache/webpack/client-development/2.pack.gz_' -> '/data/data/com.termux/files/home/bazarak/bazarak-admin/.next/dev/cache/webpack/client-development/2.pack.gz'
+ GET /products 404 in 3.8s (next.js: 3.0s, application-code: 814ms)
+[?25h
