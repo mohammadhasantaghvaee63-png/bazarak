@@ -29,13 +29,23 @@ export class SuppliersService {
   }
 
   getProducts(search?: string, supplierId?: number) {
-    const where = supplierId ? { supplierId } : search
-      ? [
-          { name: ILike(`%${search}%`) },
-          { category: ILike(`%${search}%`) },
-          { description: ILike(`%${search}%`) },
-        ]
-      : undefined;
+    let where: any = undefined;
+
+    if (supplierId && search) {
+      where = [
+        { supplierId, name: ILike(`%${search}%`) },
+        { supplierId, category: ILike(`%${search}%`) },
+        { supplierId, description: ILike(`%${search}%`) },
+      ];
+    } else if (supplierId) {
+      where = { supplierId };
+    } else if (search) {
+      where = [
+        { name: ILike(`%${search}%`) },
+        { category: ILike(`%${search}%`) },
+        { description: ILike(`%${search}%`) },
+      ];
+    }
 
     return this.productRepository.find({
       where,
