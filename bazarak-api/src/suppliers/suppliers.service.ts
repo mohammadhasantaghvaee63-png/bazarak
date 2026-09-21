@@ -14,8 +14,9 @@ export class SuppliersService {
     private readonly productRepository: Repository<Product>,
   ) {}
 
-  getSuppliers(type?: string, city?: string, category?: string) {
+  getSuppliers(type?: string, city?: string, category?: string, search?: string) {
     const where = {
+      ...(search ? { name: ILike(`%${search}%`) } : {}),
       ...(type ? { type } : {}),
       ...(city ? { city } : {}),
     };

@@ -6,8 +6,8 @@ export class SuppliersController {
   constructor(private readonly suppliersService: SuppliersService) {}
 
   @Get()
-  getSuppliers(@Query('type') type?: string, @Query('city') city?: string, @Query('category') category?: string) {
-    return this.suppliersService.getSuppliers(type, city, category);
+  getSuppliers(@Query('type') type?: string, @Query('city') city?: string, @Query('category') category?: string, @Query('search') search?: string) {
+    return this.suppliersService.getSuppliers(type, city, category, search);
   }
 
   @Post()
