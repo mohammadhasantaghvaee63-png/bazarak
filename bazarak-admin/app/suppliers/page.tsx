@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 
 type Supplier = {
   id: number;
@@ -9,9 +10,12 @@ type Supplier = {
   category: string;
   type: string;
   phone: string;
+    address?: string;
+    description?: string;
 };
 
 export default function SuppliersPage() {
+  const router = useRouter();
   const [suppliers, setSuppliers] = useState<Supplier[]>([]);
   const [loading, setLoading] = useState(true);
   const [showForm, setShowForm] = useState(false);
@@ -23,11 +27,13 @@ export default function SuppliersPage() {
     category: "مواد غذایی",
     type: "factory",
     phone: "",
+      address: "",
+      description: "",
   });
 
   const loadSuppliers = async () => {
     try {
-      const res = await fetch("http://localhost:3002/suppliers");
+      const res = await fetch("http://localhost:4000/suppliers");
       const data = await res.json();
       setSuppliers(Array.isArray(data) ? data : []);
     } catch (error) {
@@ -46,7 +52,7 @@ export default function SuppliersPage() {
     setSaving(true);
 
     try {
-      const res = await fetch("http://localhost:3002/suppliers", {
+      const res = await fetch("http://localhost:4000/suppliers", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -64,6 +70,8 @@ export default function SuppliersPage() {
         category: "مواد غذایی",
         type: "factory",
         phone: "",
+      address: "",
+      description: "",
       });
 
       setShowForm(false);
@@ -160,6 +168,24 @@ export default function SuppliersPage() {
                 }
                 className="rounded-xl border p-3"
               />
+              <input
+                placeholder="آدرس"
+                value={form.address}
+                onChange={(e) =>
+                  setForm({ ...form, address: e.target.value })
+                }
+                className="rounded-xl border p-3"
+              />
+
+              <textarea
+                placeholder="توضیحات"
+                value={form.description}
+                onChange={(e) =>
+                  setForm({ ...form, description: e.target.value })
+                }
+                className="rounded-xl border p-3 md:col-span-2"
+                rows={3}
+              />
             </div>
 
             <button
@@ -195,9 +221,11 @@ export default function SuppliersPage() {
                       : "عمده‌فروش"}
                   </p>
                   <p>📞 تلفن: {supplier.phone}</p>
+                  {supplier.address && <p>📍 آدرس: {supplier.address}</p>}
+                  {supplier.description && <p>📝 توضیحات: {supplier.description}</p>}
                 </div>
 
-                <button className="mt-5 w-full rounded-xl bg-blue-700 px-4 py-3 font-bold text-white">
+                <button onClick={() => router.push(`/products?supplierId=${supplier.id}`)} className="mt-5 w-full rounded-xl bg-blue-700 px-4 py-3 font-bold text-white">
                   مشاهده محصولات
                 </button>
               </div>

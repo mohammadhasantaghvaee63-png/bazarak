@@ -20,9 +20,9 @@ export class SuppliersController {
   }
 
   @Get('products')
-  getProducts(@Query('search') search?: string) {
+  getProducts(@Query('search') search?: string, @Query('supplierId') supplierId?: string) {
     console.log("SEARCH =", search);
-    return this.suppliersService.getProducts(search);
+    return this.suppliersService.getProducts(search, supplierId ? Number(supplierId) : undefined);
   }
 
   @Post('products')

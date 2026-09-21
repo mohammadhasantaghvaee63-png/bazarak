@@ -39,7 +39,7 @@ export default function ProductsPage() {
 
   const loadSuppliers = async () => {
     try {
-      const res = await fetch("http://localhost:3002/suppliers");
+      const res = await fetch("http://localhost:4000/suppliers");
       const data = await res.json();
       setSuppliers(Array.isArray(data) ? data : []);
     } catch (error) {
@@ -51,9 +51,25 @@ export default function ProductsPage() {
     setLoading(true);
 
     try {
-      const url = search.trim()
-        ? `http://localhost:3002/suppliers/products?search=${encodeURIComponent(search)}`
-        : "http://localhost:3002/suppliers/products";
+      const supplierId = new URLSearchParams(
+        window.location.search
+      ).get("supplierId");
+
+      const params = new URLSearchParams();
+
+      if (search.trim()) {
+        params.set("search", search.trim());
+      }
+
+      if (supplierId) {
+        params.set("supplierId", supplierId);
+      }
+
+      const query = params.toString();
+
+      const url = query
+        ? `http://localhost:4000/suppliers/products?${query}`
+        : "http://localhost:4000/suppliers/products";
 
       const res = await fetch(url);
       const data = await res.json();
@@ -75,20 +91,23 @@ export default function ProductsPage() {
     e.preventDefault();
 
     try {
-      const res = await fetch("http://localhost:3002/suppliers/products", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name: form.name,
-          category: form.category,
-          description: form.description,
-          price: Number(form.price),
-          unit: form.unit,
-          supplierId: Number(form.supplierId),
-        }),
-      });
+      const res = await fetch(
+        "http://localhost:4000/suppliers/products",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name: form.name,
+            category: form.category,
+            description: form.description,
+            price: Number(form.price),
+            unit: form.unit,
+            supplierId: Number(form.supplierId),
+          }),
+        }
+      );
 
       if (!res.ok) {
         throw new Error("خطا در افزودن محصول");
@@ -105,195 +124,163 @@ export default function ProductsPage() {
 
       setShowForm(false);
       loadProducts();
-    loadSuppliers();
     } catch (error) {
-      console.error(error);
-      alert("افزودن محصول انجام نشد.");
+      console.error("Add product error:", error);
     }
   };
 
   return (
-    <main
-      className="min-h-screen bg-slate-100 p-6 text-slate-900"
-      dir="rtl"
-    >
-      <div className="mx-auto max-w-7xl">
-        <header className="mb-8">
-          <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-            <div>
-              <h1 className="text-3xl font-bold text-blue-700">
-                مدیریت محصولات
-              </h1>
+    <main dir="rtl" style={{ padding: 24 }}>
+      <h1>مدیریت محصولات بازارک</h1>
 
-              <p className="mt-2 text-slate-600">
-                مدیریت محصولات و تأمین‌کنندگان بازارک
-              </p>
-            </div>
+      <div style={{ marginBottom: 20 }}>
+        <input
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+          placeholder="جستجوی محصول..."
+          style={{
+            padding: 10,
+            width: "100%",
+            maxWidth: 400,
+            marginLeft: 10,
+          }}
+        />
 
-            <button
-              onClick={() => setShowForm(!showForm)}
-              className="rounded-xl bg-blue-600 px-5 py-3 font-bold text-white shadow-sm hover:bg-blue-700"
-            >
-              {showForm ? "بستن فرم" : "➕ افزودن محصول"}
-            </button>
-          </div>
-        </header>
+        <button
+          onClick={() => setShowForm(!showForm)}
+          style={{ padding: "10px 18px" }}
+        >
+          {showForm ? "بستن فرم" : "افزودن محصول"}
+        </button>
+      </div>
 
-        {showForm && (
-          <form
-            onSubmit={addProduct}
-            className="mb-8 rounded-2xl bg-white p-6 shadow-sm"
-          >
-            <h2 className="mb-5 text-xl font-bold text-slate-800">
-              افزودن محصول جدید
-            </h2>
+      {showForm && (
+        <form
+          onSubmit={addProduct}
+          style={{
+            border: "1px solid #ddd",
+            padding: 20,
+            marginBottom: 25,
+            maxWidth: 600,
+          }}
+        >
+          <h2>افزودن محصول جدید</h2>
 
-            <div className="grid gap-4 md:grid-cols-2">
-              <input
-                required
-                placeholder="نام محصول"
-                value={form.name}
-                onChange={(e) =>
-                  setForm({ ...form, name: e.target.value })
-                }
-                className="rounded-xl border p-3"
-              />
-
-              <input
-                placeholder="دسته‌بندی"
-                value={form.category}
-                onChange={(e) =>
-                  setForm({ ...form, category: e.target.value })
-                }
-                className="rounded-xl border p-3"
-              />
-
-              <input
-                required
-                type="number"
-                placeholder="قیمت"
-                value={form.price}
-                onChange={(e) =>
-                  setForm({ ...form, price: e.target.value })
-                }
-                className="rounded-xl border p-3"
-              />
-
-              <input
-                placeholder="واحد؛ مثال: کیلو"
-                value={form.unit}
-                onChange={(e) =>
-                  setForm({ ...form, unit: e.target.value })
-                }
-                className="rounded-xl border p-3"
-              />
-
-              <select
-                required
-                value={form.supplierId}
-                onChange={(e) =>
-                  setForm({ ...form, supplierId: e.target.value })
-                }
-                className="rounded-xl border p-3"
-              >
-                <option value="">انتخاب تأمین‌کننده</option>
-                {suppliers.map((supplier) => (
-                  <option key={supplier.id} value={supplier.id}>
-                    {supplier.name} - {supplier.city}
-                  </option>
-                ))}
-              </select>
-
-              <input
-                placeholder="توضیحات"
-                value={form.description}
-                onChange={(e) =>
-                  setForm({ ...form, description: e.target.value })
-                }
-                className="rounded-xl border p-3"
-              />
-            </div>
-
-            <button
-              type="submit"
-              className="mt-5 rounded-xl bg-green-600 px-6 py-3 font-bold text-white hover:bg-green-700"
-            >
-              ثبت محصول
-            </button>
-          </form>
-        )}
-
-        <div className="mb-6 rounded-2xl bg-white p-4 shadow-sm">
           <input
-            type="text"
-            placeholder="🔎 جستجوی محصول، دسته‌بندی یا توضیحات..."
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            className="w-full rounded-xl border p-4 outline-none focus:border-blue-500"
+            required
+            placeholder="نام محصول"
+            value={form.name}
+            onChange={(e) =>
+              setForm({ ...form, name: e.target.value })
+            }
+            style={{ display: "block", padding: 10, width: "100%", marginBottom: 10 }}
           />
-        </div>
+
+          <input
+            required
+            placeholder="دسته‌بندی"
+            value={form.category}
+            onChange={(e) =>
+              setForm({ ...form, category: e.target.value })
+            }
+            style={{ display: "block", padding: 10, width: "100%", marginBottom: 10 }}
+          />
+
+          <input
+            required
+            placeholder="قیمت"
+            type="number"
+            value={form.price}
+            onChange={(e) =>
+              setForm({ ...form, price: e.target.value })
+            }
+            style={{ display: "block", padding: 10, width: "100%", marginBottom: 10 }}
+          />
+
+          <input
+            required
+            placeholder="واحد (مثلاً کیلو، عدد، کارتن)"
+            value={form.unit}
+            onChange={(e) =>
+              setForm({ ...form, unit: e.target.value })
+            }
+            style={{ display: "block", padding: 10, width: "100%", marginBottom: 10 }}
+          />
+
+          <textarea
+            placeholder="توضیحات محصول"
+            value={form.description}
+            onChange={(e) =>
+              setForm({ ...form, description: e.target.value })
+            }
+            style={{ display: "block", padding: 10, width: "100%", marginBottom: 10 }}
+          />
+
+          <select
+            required
+            value={form.supplierId}
+            onChange={(e) =>
+              setForm({ ...form, supplierId: e.target.value })
+            }
+            style={{ display: "block", padding: 10, width: "100%", marginBottom: 10 }}
+          >
+            <option value="">انتخاب فروشنده</option>
+
+            {suppliers.map((supplier) => (
+              <option key={supplier.id} value={supplier.id}>
+                {supplier.name} - {supplier.city}
+              </option>
+            ))}
+          </select>
+
+          <button
+            type="submit"
+            style={{ padding: "10px 20px" }}
+          >
+            ثبت محصول
+          </button>
+        </form>
+      )}
+
+      <section>
+        <h2>لیست محصولات</h2>
 
         {loading ? (
-          <div className="rounded-2xl bg-white p-6 shadow-sm">
-            در حال دریافت محصولات...
-          </div>
+          <p>در حال بارگذاری...</p>
         ) : products.length === 0 ? (
-          <div className="rounded-2xl bg-white p-6 text-center shadow-sm">
-            محصولی پیدا نشد.
-          </div>
+          <p>محصولی پیدا نشد.</p>
         ) : (
-          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          <div>
             {products.map((product) => (
               <div
                 key={product.id}
-                className="rounded-2xl bg-white p-6 shadow-sm"
+                style={{
+                  border: "1px solid #ddd",
+                  padding: 16,
+                  marginBottom: 12,
+                  borderRadius: 8,
+                }}
               >
-                <div className="flex items-start justify-between gap-3">
-                  <h2 className="text-xl font-bold">
-                    {product.name}
-                  </h2>
-
-                  <span className="rounded-lg bg-blue-50 px-3 py-1 text-sm text-blue-700">
-                    #{product.id}
-                  </span>
-                </div>
-
-                <div className="mt-4 space-y-2 text-slate-600">
-                  <p>📦 دسته: {product.category || "نامشخص"}</p>
-
-                  <p>
-                    💰 قیمت:{" "}
-                    {Number(product.price).toLocaleString()} تومان
-                  </p>
-
-                  <p>⚖️ واحد: {product.unit || "نامشخص"}</p>
-
-                  <p>
-                    🏭 تأمین‌کننده:{" "}
-                    {product.supplier?.name || "نامشخص"}
-                  </p>
-
-                  <p>
-                    📍 شهر:{" "}
-                    {product.supplier?.city || "نامشخص"}
-                  </p>
-
-                  <p>
-                    🏠 آدرس:{" "}
-                    {product.supplier?.address || "نامشخص"}
-                  </p>
-                </div>
+                <h3>{product.name}</h3>
+                <p>دسته‌بندی: {product.category}</p>
+                <p>
+                  قیمت: {product.price.toLocaleString()} تومان / {product.unit}
+                </p>
 
                 {product.description && (
-                  <p className="mt-4 rounded-xl bg-slate-50 p-3 text-sm text-slate-600">
-                    {product.description}
+                  <p>توضیحات: {product.description}</p>
+                )}
+
+                {product.supplier && (
+                  <p>
+                    فروشنده: {product.supplier.name}
                   </p>
                 )}
               </div>
             ))}
           </div>
         )}
-      </div>
+      </section>
     </main>
   );
 }

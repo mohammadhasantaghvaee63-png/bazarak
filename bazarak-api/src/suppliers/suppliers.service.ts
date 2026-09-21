@@ -28,8 +28,8 @@ export class SuppliersService {
     return this.supplierRepository.save(newSupplier);
   }
 
-  getProducts(search?: string) {
-    const where = search
+  getProducts(search?: string, supplierId?: number) {
+    const where = supplierId ? { supplierId } : search
       ? [
           { name: ILike(`%${search}%`) },
           { category: ILike(`%${search}%`) },

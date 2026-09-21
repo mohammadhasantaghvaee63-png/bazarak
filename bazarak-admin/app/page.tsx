@@ -28,12 +28,12 @@ export default function Home() {
   });
 
   useEffect(() => {
-    fetch("http://localhost:3002/suppliers/dashboard/stats")
+    fetch("http://localhost:4000/suppliers/dashboard/stats")
       .then((res) => res.json())
       .then((data) => setStats(data))
       .catch((err) => console.error("Stats error:", err));
 
-    fetch("http://localhost:3002/orders/report/financial")
+    fetch("http://localhost:4000/orders/report/financial")
       .then((res) => res.json())
       .then((data) => setReport(data))
       .catch((err) => console.error("Report error:", err));
@@ -59,6 +59,8 @@ export default function Home() {
           <a href="/suppliers" className="rounded-2xl bg-white p-5 text-center font-bold text-slate-800 shadow-sm">🏭 مدیریت تأمین‌کنندگان</a>
           <a href="/products" className="rounded-2xl bg-white p-5 text-center font-bold text-slate-800 shadow-sm">📦 مدیریت محصولات</a>
           <a href="/orders" className="rounded-2xl bg-white p-5 text-center font-bold text-slate-800 shadow-sm">🛒 مدیریت سفارش‌ها</a>
+          <a href="/shop" className="rounded-2xl bg-green-600 p-5 text-center font-bold text-white shadow-sm">🛒 فروشگاه و ثبت سفارش</a>
+          <a href="/financial-report" className="rounded-2xl bg-white p-5 text-center font-bold text-slate-800 shadow-sm">📊 گزارش مالی</a>
         </nav>
         <section className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           <div className="rounded-2xl bg-white p-6 shadow-sm">
