@@ -204,7 +204,7 @@ export default function OrdersPage() {
               هنوز سفارشی ثبت نشده است
             </h2>
 
-            <p className="mt-2 text-slate-500">
+            <p className="mt-2 text-slate-700">
               سفارش‌های ثبت‌شده در این قسمت نمایش داده می‌شوند.
             </p>
           </div>
@@ -253,35 +253,35 @@ export default function OrdersPage() {
                   <div className="grid gap-4 md:grid-cols-3">
 
                     <div>
-                      <div className="text-sm text-slate-500">
+                      <div className="text-sm text-black">
                         محصول
                       </div>
-                      <div className="font-bold">
+                      <div className="font-bold text-slate-900">
                         {order.product?.name || "نامشخص"}
                       </div>
                     </div>
 
                     <div>
-                      <div className="text-sm text-slate-500">
+                      <div className="text-sm text-black">
                         تعداد
                       </div>
-                      <div className="font-bold">
+                      <div className="font-bold text-slate-900">
                         {order.quantity ?? "نامشخص"}{" "}
                         {order.unit || order.product?.unit || ""}
                       </div>
                     </div>
 
                     <div>
-                      <div className="text-sm text-slate-500">
+                      <div className="text-sm text-black">
                         قیمت فعلی
                       </div>
-                      <div className="font-bold">
+                      <div className="font-bold text-slate-900">
                         {formatPrice(price)}
                       </div>
                     </div>
 
                     <div>
-                      <div className="text-sm text-slate-500">
+                      <div className="text-sm text-black">
                         مبلغ کل فعلی
                       </div>
                       <div className="text-xl font-bold text-green-700">
@@ -290,7 +290,7 @@ export default function OrdersPage() {
                     </div>
 
                     <div>
-                      <div className="text-sm text-slate-500">
+                      <div className="text-sm text-black">
                         پورسانت بازارک
                       </div>
                       <div className="font-bold text-orange-600">
@@ -299,10 +299,10 @@ export default function OrdersPage() {
                     </div>
 
                     <div>
-                      <div className="text-sm text-slate-500">
+                      <div className="text-sm text-black">
                         درصد پورسانت
                       </div>
-                      <div className="font-bold">
+                      <div className="font-bold text-slate-900">
                         {order.commissionPercent != null
                           ? `${order.commissionPercent}٪`
                           : "نامشخص"}
@@ -310,28 +310,28 @@ export default function OrdersPage() {
                     </div>
 
                     <div>
-                      <div className="text-sm text-slate-500">
+                      <div className="text-sm text-black">
                         مشتری
                       </div>
-                      <div className="font-bold">
+                      <div className="font-bold text-slate-900">
                         {order.customerName || "نامشخص"}
                       </div>
                     </div>
 
                     <div>
-                      <div className="text-sm text-slate-500">
+                      <div className="text-sm text-black">
                         تلفن مشتری
                       </div>
-                      <div className="font-bold">
+                      <div className="font-bold text-slate-900">
                         {order.customerPhone || "نامشخص"}
                       </div>
                     </div>
 
                     <div>
-                      <div className="text-sm text-slate-500">
+                      <div className="text-sm text-black">
                         تأمین‌کننده فعلی
                       </div>
-                      <div className="font-bold">
+                      <div className="font-bold text-slate-900">
                         {order.supplier?.name || "هنوز تعیین نشده"}
                       </div>
                     </div>
@@ -340,7 +340,7 @@ export default function OrdersPage() {
 
                   {order.message && (
                     <div className="mt-4 rounded-xl bg-slate-50 p-4">
-                      <div className="text-sm text-slate-500">
+                      <div className="text-sm text-black">
                         توضیحات سفارش
                       </div>
                       <div className="mt-1 font-medium text-slate-700">
@@ -369,7 +369,7 @@ export default function OrdersPage() {
                               [order.id]: e.target.value,
                             }))
                           }
-                          className="w-full rounded-xl border border-slate-200 bg-white px-3 py-3 outline-none"
+                          className="w-full rounded-xl border border-slate-200 bg-white px-3 py-3 text-black placeholder:text-slate-700 outline-none"
                         >
                           <option value="">
                             انتخاب تأمین‌کننده
@@ -400,7 +400,7 @@ export default function OrdersPage() {
                               [order.id]: e.target.value,
                             }))
                           }
-                          className="w-full rounded-xl border border-slate-200 bg-white px-3 py-3 outline-none"
+                          className="w-full rounded-xl border border-slate-200 bg-white px-3 py-3 text-black placeholder:text-slate-700 outline-none"
                           placeholder="مثلاً 230000"
                         />
                       </div>
@@ -420,7 +420,7 @@ export default function OrdersPage() {
                               [order.id]: e.target.value,
                             }))
                           }
-                          className="w-full rounded-xl border border-slate-200 bg-white px-3 py-3 outline-none"
+                          className="w-full rounded-xl border border-slate-200 bg-white px-3 py-3 text-black placeholder:text-slate-700 outline-none"
                           placeholder="مثلاً 3"
                         />
                       </div>
@@ -430,7 +430,7 @@ export default function OrdersPage() {
                     <div className="mt-4 grid gap-3 md:grid-cols-2">
 
                       <div className="rounded-xl bg-white p-4">
-                        <div className="text-sm text-slate-500">
+                        <div className="text-sm text-black">
                           مبلغ نهایی سفارش
                         </div>
                         <div className="mt-1 text-lg font-bold text-green-700">
@@ -439,7 +439,7 @@ export default function OrdersPage() {
                       </div>
 
                       <div className="rounded-xl bg-white p-4">
-                        <div className="text-sm text-slate-500">
+                        <div className="text-sm text-black">
                           پورسانت بازارک
                         </div>
                         <div className="mt-1 text-lg font-bold text-orange-600">
